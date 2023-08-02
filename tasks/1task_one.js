@@ -5,14 +5,14 @@ let DOB = 1999,
     name = 'Ojukwu',
     location = 'Anambra'
 
- const fifaWc = (DOB, year, name,location) => {
+ const profile = (DOB, year, name,location) => {
     let age = `${year-DOB}`
-    profile = `Hello ${name} from ${location}, your current age is ${age}`;
+    let profile = `Hello ${name} from ${location}, your current age is ${age}`;
     console.log(profile);
     return age
 };
-let age = fifaWc(DOB, year, name,location) 
-console.log(age);
+let user = profile(DOB, year, name,location) 
+console.log(user);
 
 
   

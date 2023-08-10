@@ -1,4 +1,3 @@
-// Create an array of objects of length 4. Each object should have the following properties: firstName, lastName, complexion, and occupation. Loop through the array, for each item, and display the user’s info in a separate div created dynamically.
 const arrayObjects = [
     {
         firstName: "winners",

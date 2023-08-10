@@ -3,9 +3,11 @@ const locate = document.getElementById('inputText')
 const weatherData = document.getElementById('weatherData')
 
 const btn = document.getElementById('submit')
-btn.addEventListener('click' ,weatherD =>{
+btn.addEventListener('click', ()=>{
+  weatherD()
   locate.value=""
-})
+}
+)
 locate.addEventListener('keypress', event =>{
   if(event.key === 'Enter'){
     weatherD()
@@ -26,15 +28,15 @@ async function weatherD (){
       const cityName = data.name
       const country = data.sys.country
       const description = data.weather[0].description
-  
-      weatherData.innerHTML = `<h2>CITY: ${cityName}</h2><h6>COUNTRY CODE: ${country}</h6><p>TEMPERATURE: ${temperature} °C</p>
+     
+    
+      weatherData.innerHTML = `<h2>CITY: ${cityName}</h2><h6>COUNTRY CODE: ${country}</h6><p>TEMPERATURE: ${Math.round(temperature -273.15)} °C</p>
         <p>Description: ${description}</p>`
-      
+      weatherData.style.color = 'white'
     }
     else{
       alert('enter correct location')
     }
-
   }
   catch(error){
     weatherData.innerText = alert('error')
